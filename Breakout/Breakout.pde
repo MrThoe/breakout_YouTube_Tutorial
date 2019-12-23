@@ -4,8 +4,14 @@
   * @Date: 12/15/2019
   */
 
-import processing.sound.*;  
-SoundFile file; 
+/*
+import processing.sound.*;     //I added this after the tutorial and is a little tricky if you have not used Sound Before
+SoundFile file;  
+
+I have commented out the code that requires sound.  If you want to add sound, you can un-comment these changes
+BUT you must have a sound file ("song.mp3") in the SAME FOLDER as the breakout game.
+*/
+
 Ball ball;
 Paddle paddle;
 Block[][] block;
@@ -20,7 +26,7 @@ void setup(){
   rows = 4;
   columns = 8;
   makeLevel(columns, rows);
-  file = new SoundFile(this, "song.mp3");
+  //file = new SoundFile(this, "song.mp3");
  
 }
 
@@ -114,6 +120,6 @@ void mousePressed(){
   } else {
     setup();
   } 
-  file.stop();
-  file.play();
+  //file.stop();
+  //file.play();
 }
