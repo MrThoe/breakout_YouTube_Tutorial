@@ -39,7 +39,7 @@ public class Ball{
     }
     fill(155);
     ellipse(x,y,d+10,d+10);    
-    fill(200,170,0);
+    fill(100,170,0);
     ellipse(x,y,d,d);
   }
   

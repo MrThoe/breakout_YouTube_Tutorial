@@ -24,28 +24,28 @@ public class Block{
     public void setColors(int col, int row){
         b = 150;
         if(col%9==0){
-          r = 50;
+          r = 70;
         } else if (col%9==1){
-          r = 100;
+          r = 120;
         } else if (col%9==2){
-          r = 150;
+          r = 160;
         } else if (col%9==3){
-          r = 200;
+          r = 220;
         } else if (col%9==4){ 
           r = 250;
         } else if (col%9==5){
-          r = 200;
+          r = 180;
         } else if (col%9==6){
-          r = 150;
+          r = 130;
         } else if (col%9==7){
-          r = 100;
+          r = 80;
         } else if (col%9==8){ 
-          r = 50;
+          r = 43;
         }
         
         if(row%2==0){
-          g = 70;
-          b = 150;
+          g = 30;
+          b = 75;
         }
     }
     public void display(){

@@ -1,17 +1,3 @@
-/** BREAKOUT RETRO!  --> PART 5  Details ; )
-  *
-  * @Author:  ALLEN THOE
-  * @Date: 12/15/2019
-  */
-
-/*
-import processing.sound.*;     //I added this after the tutorial and is a little tricky if you have not used Sound Before
-SoundFile file;  
-
-I have commented out the code that requires sound.  If you want to add sound, you can un-comment these changes
-BUT you must have a sound file ("song.mp3") in the SAME FOLDER as the breakout game.
-*/
-
 Ball ball;
 Paddle paddle;
 Block[][] block;
@@ -26,8 +12,6 @@ void setup(){
   rows = 4;
   columns = 8;
   makeLevel(columns, rows);
-  //file = new SoundFile(this, "song.mp3");
- 
 }
 
 void draw(){
@@ -50,8 +34,8 @@ void checkLevel(){
     rect(190, height/2 + 130, 400, 30);
     rect(250, height/2 + 160, 400, 30);    
     fill(255,0,255);  
-    text("You Cleared all the blocks!" , 200, height/2+152);
-    text("Click anywhere to continue" , 260, height/2+182); 
+    text("Tu has limpiado todos los bloques" , 200, height/2+152);
+    text("Click para continuar" , 260, height/2+182); 
     if(mousePressed){
       if(level%2==0){
         rows *= 2;
@@ -67,18 +51,18 @@ void checkLevel(){
 void showScore(){
   strokeWeight(2);
   fill(255,0,255);
-  text("Score: " + score, width - 140, height - 10); 
+  text("Marcador: " + score, width - 140, height - 10); 
 }
 void showLives(){
   fill(255,0,255);  
-  text("Lives: " + lives, 40, height - 10);  
+  text("Vidas: " + lives, 40, height - 10);  
   if(lives == 0){
     fill(0);
     rect(190, height/2 + 130, 400, 30);
     rect(250, height/2 + 160, 400, 30);    
     fill(255,0,255);  
-    text("Sorry, you ran out of lives...." , 200, height/2+152);
-    text("Click anywhere to restart" , 260, height/2+182);    
+    text("Game over" , 200, height/2+152);
+    text("Da click para continuar" , 260, height/2+182);    
   }
 }
 
@@ -119,7 +103,5 @@ void mousePressed(){
     ball.canMove = true; 
   } else {
     setup();
-  } 
-  //file.stop();
-  //file.play();
+  }
 }
