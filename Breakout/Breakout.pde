@@ -38,9 +38,9 @@ void checkLevel(){
     text("Click para continuar" , 260, height/2+182); 
     if(mousePressed){
       if(level%2==0){
-        rows *= 2;
+        rows += 2;
       } else {
-        columns *= 2;
+        columns += 2;
       }
       makeLevel(rows, columns);   
       ball.canMove = true;
@@ -81,7 +81,7 @@ void makeLevel(int rows, int columns){
   block = new Block[rows][columns];
   for(int i = 0; i < block.length; i++){
     for(int j = 0; j < block[0].length; j++){
-      block[i][j] = new Block(i,j+5,block.length);
+      block[i][j] = new Block(i,j+3,block.length);
     }
   }  
 }

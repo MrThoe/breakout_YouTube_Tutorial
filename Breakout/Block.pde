@@ -54,7 +54,7 @@ public class Block{
       fill(r/2,g/2,b/2);
       if(status){
         rect(x,y, w, h, 10);
-        fill(255,255,0);
+        fill(255,255,255);
         rect(x+8, y+8, w-16, h-16, 2);
         fill(r,g,b);
         rect(x+10, y+10, w-20, h-20, 3);
@@ -62,7 +62,7 @@ public class Block{
       }
     }
     
-    public void checkBall(Ball ball){
+    public void checkBall(Ball ball){//choque con bloques
        if(status){
          //Bottom
          if(ball.x > x && ball.x < x+w && ball.y < (y+h+ball.d/2)&& ball.y>y+h){

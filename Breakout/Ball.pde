@@ -43,7 +43,7 @@ public class Ball{
     ellipse(x,y,d,d);
   }
   
-  public void checkPaddle(Paddle pad){
+  public void checkPaddle(Paddle pad){//cuando pega en la barra
       if(x > pad.x && x < pad.x + pad.w && y > pad.y - d/2 && y < pad.y+2){
         //Vy *= -1;
         Vx += (x - mouseX)/10;
